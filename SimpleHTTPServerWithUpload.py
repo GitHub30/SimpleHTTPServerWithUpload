@@ -192,7 +192,7 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
         f = BytesIO()
         displaypath = html.escape(urllib.parse.unquote(self.path))
         f.write(b'<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">')
-        f.write(("<html>\n<title>Directory listing for %s</title>\n" % displaypath).encode())
+        f.write(("<html>\n<meta charset=UTF-8>\n<title>Directory listing for %s</title>\n" % displaypath).encode())
         f.write(b'<style type="text/css">\n')
         f.write(b'a { text-decoration: none; }\n')
         f.write(b'a:link { text-decoration: none; font-weight: bold; color: #0000ff; }\n')
